@@ -119,6 +119,7 @@ app.delete("/hotels/:id",isAuthenticated,(request,response)=>{
     }
 });
 
-app.listen(4000,()=>{
-    console.log("server is running on port 4000");
-})
+app.listen(process.env.PORT || 3000);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
